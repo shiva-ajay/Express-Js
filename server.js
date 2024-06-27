@@ -12,8 +12,16 @@ let posts = [
   { id: 2, title: "Post Two" },
   { id: 3, title: "Post Three" },
 ];
+
+// Get all posts
 app.get("/api/posts", (req, res) => {
   res.json(posts);
+});
+// Get single post
+app.get("/api/posts/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  res.json(posts.filter((post) => post.id === id));
+  I;
 });
 
 app.listen(port, () => {
