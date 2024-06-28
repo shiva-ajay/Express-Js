@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
 
 let posts = [
@@ -28,5 +28,5 @@ let posts = [
     
   });
 
-  module.exports = router;
+export default router;
   
