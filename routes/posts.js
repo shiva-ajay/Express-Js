@@ -28,5 +28,12 @@ let posts = [
     
   });
 
+  //Create new post
+  router.post('/', (req, res) => {
+    console.log(req.body);
+
+    res.status(201).json(posts);
+  });
+
 export default router;
   
